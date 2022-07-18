@@ -15,9 +15,9 @@ function Contact() {
 
         emailjs.sendForm('service_ire79og', "template_qmyp81j", form.current, '1C4hyPlUvnPnFQZTG')
         .then((result) => {
-            console.log(result.text);
+            alert("Message sending success!");
         }, (error) => {
-            console.log(error.text);
+            alert("Message sending failed!");
         });
     };
     
@@ -41,6 +41,7 @@ function Contact() {
                         <span>Message</span>
                     </div>
                     <input type="submit" value="Send" className="submit-btn" />
+                    <span>It may take some time to complete!!</span>
                 </form>
                 <div className="Link-contact">
                     <ul>

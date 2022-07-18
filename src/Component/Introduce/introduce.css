@@ -173,8 +173,8 @@
 
 @media (max-width: 739px) {
     .Intro {
-        overflow: hidden;
-        height: 900px;
+        /* overflow: hidden; */
+        height: 130vh;
     }
     .wrap{
         /* padding-top: 100px; */

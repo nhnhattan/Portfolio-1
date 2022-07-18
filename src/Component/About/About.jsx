@@ -60,7 +60,7 @@ function About() {
                             <div className="about-icon" >
                                 <FaLanguage />
                             </div>
-                                <li>Toeic: </li>
+                                <li>TOEIC: </li>
                         </div>
                     </ul>
                 </div>
@@ -69,7 +69,9 @@ function About() {
                         Having a solid knowledge of HTML, CSS, JAVASCRIPT, REACTJS, plus skills i hone every day.
                          I always to give my best to help the company grow and achieve for myself
                     </p>
-                    <button className="btn-down" ><a className="link-down" href={require ("../../asset/img/CV/Mycv.pdf")} download="MyCV">Download My CV</a> </button>
+                    <button className="btn-down" >
+                        <a className="link-down" href={"../../asset/img/CV/Mycv.pdf"} download="MyCV.pdf">Download My CV</a>
+                    </button>
                 </div>
             </section>
 
