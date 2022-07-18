@@ -22,7 +22,7 @@ function App() {
     setLoading(true);
     const timming = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2500);
     return () => clearTimeout(timming);
   }, [])
 
