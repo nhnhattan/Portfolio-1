@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import Header from '../Header/header'
 import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
@@ -6,6 +6,7 @@ import { HiMail } from "react-icons/hi";
 import ReactPlayer from 'react-player'
 
 import './Contact.css'
+import Loader from '../Loader/Loader';
 
 function Contact() {
     const form = useRef();
@@ -21,9 +22,22 @@ function Contact() {
         });
     };
     
+    const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        setLoading(true);
+        const timming = setTimeout(() => {
+        setLoading(false);
+        }, 1000);
+        return () => clearTimeout(timming);
+    }, [])
     
     return (
-        <div>
+        <>
+        {loading && <Loader /> }
+        {
+        !loading && 
+            <div>
             <Header />
             <div className="contact-wrap">
                 <form className="form-contact" ref={form} onSubmit={sendEmail}>
@@ -71,10 +85,10 @@ function Contact() {
                         </li>
                     </ul>
                 </div>
-                
-
             </div>
         </div>
+    }
+    </>
     )
 }
 

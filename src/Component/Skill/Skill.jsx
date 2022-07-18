@@ -1,12 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link, Outlet } from 'react-router-dom'
 import Header from '../Header/header'
 import Titl from 'react-vanilla-tilt'
 import Title from 'react-vanilla-tilt'
 
 import './Skill.css'
+import Loader from '../Loader/Loader';
+
 function Skill() {
+    const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        setLoading(true);
+        const timming = setTimeout(() => {
+        setLoading(false);
+        }, 1000);
+        return () => clearTimeout(timming);
+    }, [])
+
     return (
+        <>
+        {loading && <Loader /> }
+        {
+        !loading && 
         <div className="skill">
             <Header />  
             <div className="Description">
@@ -73,8 +89,8 @@ function Skill() {
 
             </div>
         </div>
-        
-        
+    }
+    </>    
     )
 }
 
