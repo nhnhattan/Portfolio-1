@@ -41,7 +41,7 @@ function Contact() {
                         <span>Message</span>
                     </div>
                     <input type="submit" value="Send" className="submit-btn" />
-                    <span>It may take some time to complete!!</span>
+                    <span className="note">It may take some time to complete!!</span>
                 </form>
                 <div className="Link-contact">
                     <ul>
