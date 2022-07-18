@@ -87,7 +87,7 @@ function About() {
                             I always to give my best to help the company grow and achieve for myself
                         </p>
                         <button className="btn-down" >
-                            <a className="link-down" href={"../../asset/img/CV/Mycv.pdf"} download="MyCV.pdf">Download My CV</a>
+                            <a className="link-down" href={require  ("./Mycv.pdf")} download="Mycv.pdf">Download My CV</a>
                         </button>
                     </div>
                 </section>
