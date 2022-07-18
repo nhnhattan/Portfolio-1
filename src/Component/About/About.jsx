@@ -5,7 +5,6 @@ import { FaCode, FaReact, FaHtml5, FaCss3Alt, FaBirthdayCake, FaUserAlt, FaSchoo
 import { SiJavascript } from 'react-icons/si'
 import { IoIosSchool } from "react-icons/io";
 import Typewriter from 'typewriter-effect';
-import DownloadLink from "react-download-link";
 import Loader from '../Loader/Loader';
 
 import './About.css'
