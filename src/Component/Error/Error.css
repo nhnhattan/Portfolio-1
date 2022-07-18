@@ -1,0 +1,236 @@
+/* body {
+  overflow: hidden;
+} */
+.wrap-project {
+    height: 80vh;
+    /* overflow: hidden; */
+    padding-bottom: 0;
+}
+.project {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 80px;
+    /* overflow: hidden; */
+}
+.project div:nth-child(1) {
+    
+    align-self: center;
+}
+
+.tree {
+    position: relative;
+    top: 70px;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(30deg) ;
+    animation: animatetree 6s linear infinite;
+  
+  }
+  
+  .tree::before {
+    content: ' ⭐️ ';
+    position: absolute;
+    top: -55px;
+    left: calc(50% - 40px);
+    font-size: 4em;
+  
+  }
+  
+  .tree div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: translateY(calc(100px * var(--j)))  ;
+  }
+  
+  
+  .tree div.top span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #00ad34, #03da31);
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    transform-origin: bottom;
+    border-bottom: 10px solid #00000019;
+    transform: rotateY(calc(90deg * var(--i))) rotateX(30deg) translateZ(116px) ;
+  
+  }
+  
+  .tree div.bottom span {
+    position: absolute;
+    top: 330px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 100px;
+    background: linear-gradient(90deg, #853016, #9c1a09);
+  
+    transform: bottom;
+    border-bottom: 10px solid #00000019;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(29px) ;
+  
+  }
+  
+  .shadow {
+    position: absolute;
+    top: -166px;
+    left: -30%;
+    width: 300px;
+    height: 300px;
+    background: rgba(109, 109, 109, 0.788);
+    transform-style: preserve-3d;
+    transform: rotateX(90deg) translateZ(-500px);
+    filter: blur(40px);
+  }
+
+  .project-warn {
+    position: relative;
+    top: -60px;
+    height: auto;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    animation: warning 1s linear;
+  }
+
+  .project-warn h1 {
+    font-size: 80px;
+    font-weight: 900;
+    color: #ff5e00;
+    margin-bottom: 60px;
+  }
+
+  .project-warn  h3 {
+    font-size: 25px;
+    width: 100%;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 3rem;
+    margin: 0;
+  }
+
+  .project-warn  p {
+    font-size: 15px;
+    width: 100%;
+    color: #ffffff;
+    line-height: 3rem;
+    margin: 0;
+  }
+
+  .wrap-content1 {
+    position: relative;
+    display: block;
+    width: 160px;
+    /* transform: translate(-50%, -50%); */
+    animation: texttrans 2s linear;
+}
+
+.wrap-content1-type  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.wrap-content1 h1 {
+    display: flex;
+    position: absolute;
+    font-size: 4.5em;
+    width: 100%;
+    /* background-color: ; */
+    line-height: 100%;
+}
+
+.wrap-content1 h1:nth-child(1) {
+    /* color: transparent; */
+    color: white;
+    text-shadow: 5px 3px 3px #90A6b1;
+
+    /* -webkit-text-stroke: 1px rgb(189, 189, 189); */
+}
+
+.wrap-content1 h1:nth-child(2) {
+    /* color: #90A6b1; */
+    /* color: white; */
+    color: rgba(3, 169, 244, 0.8);
+
+    animation: animate 3s ease-in-out infinite;
+}
+  
+  @keyframes animatetree {
+    0% {
+      transform: rotateX(-20deg) rotateY(360deg);
+    }
+    100% {
+      transform: rotateX(-20deg) rotateY(0deg);
+    }
+  }
+
+  
+
+  @keyframes warning {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 739px) {
+    .project {
+      flex-wrap: wrap;
+    }
+    .project-warn {
+      width: 100%;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      
+    }
+
+    .project-warn h1 {
+      margin-bottom: 40px;
+    }
+
+    .project-warn h3,
+    .project-warn p {
+      color: black;
+    }
+  }
+
+  @media  (min-width: 740px) and (max-width:1023px)   {
+    .project {
+      flex-wrap: wrap;
+    }
+
+    .project-warn {
+      width: 100%;
+      top: -82px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .project-warn h1 {
+      margin-bottom: 45px;
+    }
+
+    .project-warn h3,
+    .project-warn p {
+      color: black;
+    }
+
+    .tree {
+      top: -90px; 
+    }
+  }

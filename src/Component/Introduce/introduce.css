@@ -1,0 +1,246 @@
+:root{
+    --deft:100px;
+}
+
+.Intro { 
+    display: block;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: relative;
+    top: 60px;
+    height: 650px;
+    width: 100%;
+}
+
+.wrap{
+    padding-top: 100px;
+    perspective:1000px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 60%;
+    position: relative;
+    animation: texttrans 1s linear;
+}
+
+.cube-box {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    transform-style:preserve-3d;
+
+}
+
+.cube-box img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.8;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.cube-box img:nth-child(1){
+    transform: rotateY(0deg) translateZ(var(--deft));
+}
+
+.cube-box img:nth-child(2){
+    transform: rotateY(90deg) translateZ(var(--deft));
+}
+
+.cube-box img:nth-child(3){
+    transform: rotateY(180deg) translateZ(var(--deft));
+}
+
+.cube-box img:nth-child(4){
+    transform: rotateY(-90deg) translateZ(var(--deft));
+}
+
+.cube-box img:nth-child(5){
+    transform: rotateX(90deg) translateZ(var(--deft));
+}
+
+.cube-box img:nth-child(6){
+    transform: rotateX(-90deg) translateZ(var(--deft));
+}
+
+
+
+.cube-box{
+    animation: loops 10s linear infinite;
+}
+
+.cube-box:hover{
+    --deft:200px;
+    animation-play-state: paused;
+}
+
+@keyframes loops{
+    0%{ transform: rotateX(0deg) rotateY(0deg); }
+    100%{ transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.cloudy {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    animation: texttrans 1s ease-in-out;
+
+}
+
+.cloudy img {
+    z-index: 1;
+    position: absolute;
+    top: 35%;
+    /* left: -90px; */
+    animation: animationCloud 1s ease-in infinite;
+}
+
+.circle1{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 110%;
+    border-radius: 50%;
+    border: 8px dotted #fff;
+    border-spacing: 20px;
+    box-sizing: border-box;
+    font-weight: 500;
+    animation: animationCircle1 25s linear infinite;
+    
+}
+
+.circle2 {
+    background-color: rgba(206, 206, 206, 0.2);
+    border-radius: 50%;
+    width: 35%;
+    height: 99%;
+    position: absolute;
+    top: 20px;
+    animation: animationCircle2 25s linear infinite;
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 35px;
+}
+
+.Content {
+    position: absolute;
+    color: white;
+    left: 6%;
+    top: 30%;
+}
+.Content h1 {
+    font-size: 60px;
+    font-weight: 800;
+    animation: texttrans 2s linear;
+}
+
+.Content h3{
+    font-size: 20px;
+    font-weight: 800;
+    position: relative; 
+    animation: texttrans1 0.5s linear;
+}
+
+.Content p {
+    font-size: 15px;
+    position: relative;
+    animation: texttrans1 1s linear;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: -40px -35px 30px rgb(155, 155, 155);
+    transition: 1s;
+}
+
+.avatar img:hover {
+    box-shadow: 0px 0px 0px rgb(155, 155, 155);
+}
+
+@media (max-width: 739px) {
+    .Intro {
+        overflow: hidden;
+        height: 900px;
+    }
+    .wrap{
+        /* padding-top: 100px; */
+        perspective:1000px;
+        /* background-color: black; */
+        width: 100%;
+    }
+    .cloudy img {
+        z-index: 1;
+        position: absolute;
+        left: -95px;
+        /* margin-left: 100px; */
+    }
+    .circle2 {
+        top: 30px;
+        height: 75%;
+    }
+    .circle1 {
+        height: 85%;
+    }
+    .Content {
+        top: 550px;
+    }
+}
+
+@keyframes animationCircle1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animationCloud {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animationCircle2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes texttrans  {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes texttrans1  {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}

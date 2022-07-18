@@ -1,0 +1,129 @@
+:root {
+    --text-color : #040404;
+
+}
+
+.header {
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    transition: .3s ease-in;
+    z-index: 10;
+    font-weight: 400;
+}
+
+.header-bg {
+    background-color: white;
+    color: black;
+}
+
+
+.logo {
+    height: 50px;
+    margin-left: 15px;
+    z-index: 1;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    
+}
+
+.navbar-item {
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar-link {
+    font-size: 18px;
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar-link-bg {
+    color: black;
+}
+
+.navbar-link::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #ff5f09;
+    width: 0;
+    left: -5px;
+    bottom: -8px;
+    transition: 0.3s;
+}
+
+.navbar-link:hover:after {
+    width: 125%;
+}
+
+.Menu-icon {
+    display: none;
+    z-index: 11;
+}
+.icon-open {
+    display: none;
+    z-index: 11;
+
+}
+
+@media (max-width: 1023px) {
+    
+}
+
+
+@media  (min-width: 740px) and (max-width:1023px) {
+    
+}
+
+@media (max-width: 739px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+    }
+    
+    .navbar ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+        background-color: white;
+        margin: 1px 0 0 0;
+        padding-left: 0;
+        opacity: 0.8;
+    }
+    .icon-logo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    .icon-open {
+        font-size: 40px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .Menu-icon {
+        display: block;
+    }
+    .icon-open {
+        display: block;
+    }
+}
