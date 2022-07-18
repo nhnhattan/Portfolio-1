@@ -150,6 +150,7 @@
     width: 100%;
     /* background-color: ; */
     line-height: 100%;
+    -webkit-text-stroke: 2px rgba(15, 68, 117, 0.4);
 }
 
 .wrap-content h1:nth-child(1) {
