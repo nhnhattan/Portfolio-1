@@ -210,6 +210,23 @@
     }
 }
 
+@media  (min-width: 740px) and (max-width:1023px) {
+    .Content {
+        color: #fff;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        text-align: center;
+        flex-wrap: wrap;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+    }
+
+    .avatar img {
+        box-shadow: none;
+    }
+}
+
 @keyframes animationCircle1 {
     0% {
         transform: rotate(0deg);
