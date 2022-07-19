@@ -16,9 +16,9 @@ function Contact() {
 
         emailjs.sendForm('service_ire79og', "template_qmyp81j", form.current, '1C4hyPlUvnPnFQZTG')
         .then((result) => {
-            alert("Message sending success!");
+            alert("Message sent successfully!");
         }, (error) => {
-            alert("Message sending failed!");
+            alert("Message sent failed!");
         });
     };
     
