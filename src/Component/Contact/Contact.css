@@ -130,6 +130,7 @@
     border: 1px solid white;
     color: rgb(255, 255, 255);
     transition: linear 0.3s;
+    z-index: 3;
 }
 
 .submit-btn:hover {
@@ -175,8 +176,8 @@
     }
 
     .Link-contact {
-        height: 100%;
-        top: 60px;
+        height: 50%;
+        top: 90px;
         position: relative;
         width: 100%;
     }
@@ -188,7 +189,7 @@
     .contact-wrap::before {
         width: 90%;
         height: 1px;
-        top: 47%;
+        top: 52%;
         left: 25px;
     }
 
@@ -224,9 +225,13 @@
     }
 
     .Link-contact {
-        height: 80%;
+        height: 45%;
         position: relative;
         top: -40px;
+    }
+
+    .Link-contact::before {
+        top: 49%;
     }
 
     .Link-contact ul {
