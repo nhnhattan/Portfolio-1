@@ -173,7 +173,7 @@
 
 @media (max-width: 739px) {
     .Intro {
-        /* overflow: hidden; */
+        overflow: hidden;
         height: 130vh;
     }
     .wrap{
@@ -182,10 +182,18 @@
         /* background-color: black; */
         width: 100%;
     }
-    .cloudy img {
+
+    .center {
+        top: -15px;
         z-index: 1;
+    }
+
+    .cloudy img {
+        z-index: 2;
         position: absolute;
-        left: -95px;
+        left: -100px;
+        top: 210px;
+        /* display: none; */
         /* margin-left: 100px; */
     }
     .circle2 {
@@ -194,6 +202,8 @@
     }
     .circle1 {
         height: 85%;
+        position: relative;
+        left: -10px;
     }
     .Content {
         top: 550px;
